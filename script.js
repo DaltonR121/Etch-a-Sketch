@@ -1,23 +1,28 @@
+let number = 64;
 const container = document.getElementById('container');
 let randomColor = '#'+ Math.floor(Math.random()*16777215).toString(16);
 
-function createGrid(numberOfRows, numberOfColumns){
+function createGrid(number){
   
-  container.style.gridTemplateColumns = `repeat(${numberOfRows}, 1fr)`;
-  container.style.gridTemplateRows = `repeat(${numberOfColumns}, 1fr)`;
+  container.style.gridTemplateColumns = `repeat(${number}, 1fr)`;
+  container.style.gridTemplateRows = `repeat(${number}, 1fr)`;
   
-  for(let i = 0; i < numberOfRows * numberOfColumns ;i++) {
+  for(let i = 0; i < number * number ;i++) {
     let grid = document.createElement('div');
     grid.style.border = "1px solid black";
-    grid.classList.add('addColor');
-/*    Cool effect but not what we're looking for here!
-      grid.addEventListener("mouseover", () => {
+    container.appendChild(grid)
+
+    // Add random color when div passed through
+    grid.addEventListener('mouseenter', function() {
+      let randomColor = '#'+ Math.floor(Math.random()*16777215).toString(16);
       grid.style.backgroundColor = `${randomColor}`;
-    }) */
-console.log(grid)
-    container.appendChild(grid);
+    })
+
   }
 }
 
-  createGrid(3, 3);
+  createGrid(number);
 
+  function color(div) {
+      
+  }
