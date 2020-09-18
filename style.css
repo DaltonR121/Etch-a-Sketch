@@ -1,10 +1,36 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  text-align: center;
+  background-color: orange;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 #container {
   display: grid;
   outline: 2px solid #000;
   font-size: 0;
-  margin: 20px;
-  height: 500px;
-  width: 500px;
+  margin: auto;
+  margin-top: 30px;
+  height: 700px;
+  width: 700px;
   padding: 0;
   border: none;
+}
+
+#title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#reset {
+  margin-top: 20px;
+  background-color: black;
+  color:grey;
+  width: 100px;
+}
+
+#reset:hover {
+  transform: scale(1.1);
+  color: white;
 }
